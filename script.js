@@ -109,7 +109,7 @@ function draw(direction) {
     const gameOver = document.getElementById("game-over");
     gameOver.play();
     document.body.style.backgroundColor = "";
-    if (scor > 30) {
+    if (scor > 10) {
       document.getElementById("screamerImg").style.display = "block";
       document.getElementById("screamerSound").play();
       setTimeout(() => {
