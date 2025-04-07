@@ -92,6 +92,10 @@ window.addEventListener("keydown", (e) => {
   }
 });
 
+const randomEnd = () => Math.floor(Math.random() * (30 - 0 + 1) + 0);
+
+let random = randomEnd();
+
 function draw(direction) {
   const head = { ...cub[0] };
 
@@ -109,7 +113,8 @@ function draw(direction) {
     const gameOver = document.getElementById("game-over");
     gameOver.play();
     document.body.style.backgroundColor = "";
-    if (scor > 10) {
+    if (scor > random) {
+      random = randomEnd();
       document.getElementById("screamerImg").style.display = "block";
       document.getElementById("screamerSound").play();
       setTimeout(() => {
